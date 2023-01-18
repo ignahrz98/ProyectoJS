@@ -24,7 +24,8 @@ let datosCliente = document.querySelector(".datosCliente");
 
 const pintarInfo = formulario.addEventListener("submit", function (e) {
 	e.preventDefault();
-	datosCliente.innerHTML = `<h5> Muchas gracias ${nombreForm.value} por loguearte en nuestra pagina!!!, te enviaremos un mail a ${correoForm.value} para coordinar los detalles de tu compra.</h5></div>`;
+	/*datosCliente.innerHTML = `<h5> Muchas gracias ${nombreForm.value} por loguearte en nuestra pagina!!!, te enviaremos un mail a ${correoForm.value} para coordinar los detalles de tu compra.</h5></div>`;*/
+	datosCliente.innerHTML = `<div class="alert alert-primary" role="alert">Muchas gracias ${nombreForm.value} por loguearte en nuestra pagina!!!, te enviaremos un mail a ${correoForm.value} para coordinar los detalles de tu compra.</div>`;
 });
 
 // SYNC Y AWAIT //
