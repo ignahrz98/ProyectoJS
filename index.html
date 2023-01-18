@@ -40,44 +40,55 @@
         </div>
     </nav>
 
-    <div class="container">
-      <div class="container">
-        <h2>FORMULARIO DE CONTACTO</h2>
-        </div>
-        <form id="formulario" action="/redireccion">
-  
+    <div class="background-form">
+      <div class="container pt-5 pb-5">
+        
+        <form id="formulario" action="/redireccion" class="form col-12 col-lg-6">
+    
+          <h2>FORMULARIO DE CONTACTO</h2>
+
           <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label"
-            >Nombre y Apellido</label>
-            <input type="text" class="form-control" id="nombre"/>
+            <label for="formGroupExampleInput" class="form-label">
+              Nombre y Apellido
+            </label>
+            
+            <input type="text" class="form-control" id="nombre" required />
           </div>
+
           <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label"
-            >Correo Electrónico</label>
-            <input type="text" class="form-control" id="correo" />
+            <label for="formGroupExampleInput2" class="form-label">
+              Correo Electrónico
+            </label>
+            <input type="email" class="form-control" id="correo" required />
           </div>
-          <button type="submit" class="btn btn-outline-success">
+
+          <button type="submit" class="btn btn-primary">
             ENVIAR
           </button>
-          </div>
         </form>
-      <div class="container">
-        <div class="datosCliente">
+      </div>
+    </div>
+        
+    <div class="container">
+      <div class="datosCliente">
 
-        </div>
       </div>
+    </div>
     
-      <div id="listado" class="conteiner-fluid card-group">
+    <div id="listado" class="container-fluid card-group">
       
-      </div>
-      <div id="productosUnicos" class="border">
-        <h1 class="text-align-center">SU CARRITO</h1>
-        <hr>
-      </div>
-      <div class="d-flex justify-content-around align-items-center p-3">
-        <button type="button" id="borrar-todo" class="btn btn-secondary btn-lg col-4">LIMPIAR TODO</button>
-        <button type="button" id="comprar"class="btn btn-primary btn-lg col-4">COMPRAR</button>
-      </div>
+    </div>
+      
+    <div id="productosUnicos" class="border">
+      <h1 class="text-align-center">SU CARRITO</h1>
+      <hr>
+    </div>
+
+    <div class="d-flex justify-content-around align-items-center p-3">
+      <button type="button" id="borrar-todo" class="btn btn-secondary btn-lg col-4">LIMPIAR TODO</button>
+      <button type="button" id="comprar"class="btn btn-primary btn-lg col-4">COMPRAR</button>
+    </div>
+    
     <nav class="navbar bottom navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Todos los Derechos Reservados</a>

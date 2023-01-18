@@ -1,3 +1,12 @@
+/*
+PALETA DE COLORES
+#32378D azul oscuro
+#493291 morado oscuro
+#683396 morado
+#8A339B morado claro
+#A03390 morado más claro
+*/
+
 body{
     margin: 0;
     padding: 0;
@@ -22,5 +31,17 @@ h1{
 }
 
 .navbar a{
+    color: white;
+}
+
+.background-form {
+    background: #32378d;
+    background: linear-gradient(180deg,#32378d 0%, #683396 80%);
+    background: -webkit-linear-gradient(180deg,#32378d 0%, #683396 80%);
+    background: -moz-linear-gradient(180deg,#32378d 0%, #683396 80%);
+}
+
+.form h2,
+.form label {
     color: white;
 }
