@@ -3,6 +3,10 @@ let nombreForm = document.querySelector("#nombre");
 let correoForm = document.querySelector("#correo");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 
+// CONSTANTES
+
+const productosUnicosContainer = document.querySelector("#productosUnicos");
+
 // Archivos LocalStorage //
 
 const addCart = () => {localStorage.setItem("carrito", JSON.stringify(carrito));};
@@ -70,6 +74,22 @@ function agregarCarrito(id, data) {
 	carrito.push(prendaElejida);
     addCart();
 
+    //Mostrar inmediatamente
+    carrito = JSON.parse(localStorage.getItem("carrito")) || []
+
+    productosUnicos = [];
+
+	carrito.forEach(item => {
+		if (productosUnicos[item.id]) {
+			productosUnicos[item.id].cantidad++;
+		} else {
+			productosUnicos[item.id] = {...item, cantidad: 1};
+		}
+	});
+
+	productosUnicosContainer.innerHTML = "";
+    mostrarProductos();
+
 }
 
 
@@ -96,7 +116,7 @@ carrito.forEach(item => {
 
 // PINTAR CARRITO EN EL DOM //
 
-const productosUnicosContainer = document.querySelector("#productosUnicos");
+//const productosUnicosContainer = document.querySelector("#productosUnicos");
 
 function mostrarProductos () {
     productosUnicos.forEach((producto) => {
@@ -160,7 +180,8 @@ mostrarProductos();
 });
 });
 }
-mostrarProductos();
+
+//mostrarProductos();
 
 
 
