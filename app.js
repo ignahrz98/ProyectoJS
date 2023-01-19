@@ -101,23 +101,51 @@ const productosUnicosContainer = document.querySelector("#productosUnicos");
 function mostrarProductos () {
     productosUnicos.forEach((producto) => {
         const div = document.createElement("div");
-        div.innerHTML += `
+        /*div.innerHTML += `
 		<div class="d-flex justify-content-between align-items-center p-2">
-		<div class="col-3 ">
-          <img src="${producto.img}" style="width: 10rem;" alt="">
-		</div>
-        <div class="col-2 p-3 text-center border">
+			<div class="col-3 ">
+          		<img src="${producto.img}" style="width: 10rem;" alt="">
+			</div>
+        	<div class="col-2 p-3 text-center border">
               <h3>PRODUCTO: ${producto.nombre}</h3>
               <h3>PRECIO: $${producto.precio}</h3>
 			  <h3>CANTIDAD: ${producto.cantidad}</h3>
-        </div>
-		<div class="justify-content-between p-5">
-          <button type="button" class="btn btn-danger" id="${producto.id}">ELIMINAR</button>;
-          <button type="button" class="btn btn-success">AGREGAR</button>
+    		</div>
+			<div class="justify-content-between p-5">
+          		<button type="button" class="btn btn-danger" id="${producto.id}">ELIMINAR</button>
+          		<button type="button" class="btn btn-success">AGREGAR</button>
+        	</div>
+			<hr>
+		
+		` */
 
-        </div>
-		<hr>
-		` 
+		div.innerHTML += `
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="card mb-3" style="max-width: 540px;">
+					  	<div class="row g-0">
+						    <div class="col-md-4">
+						    	<img src="${producto.img}" class="img-fluid rounded-start" alt="...">
+					    	</div>
+				    	    <div class="col-md-8">
+				    	    	<div class="card-body">
+				    	    		<h5 class="card-title">${producto.nombre}</h5>
+				    	    		<p class="card-text">PRECIO: $${producto.precio}</p>
+				    	    		<p class="card-text">CANTIDAD: ${producto.cantidad}</p>
+				    	    	</div>
+				    	    </div>
+						</div>	  
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="justify-content-between p-5">
+		          		<button type="button" class="btn btn-danger" id="${producto.id}">ELIMINAR</button>
+		          		<button type="button" class="btn btn-success">AGREGAR</button>
+		        	</div>
+				</div>
+			</div>
+		`;
         productosUnicosContainer.appendChild(div);
  });
  const eliminarCantidad = document.querySelectorAll(".btn-danger");
