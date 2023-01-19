@@ -7,10 +7,9 @@ PALETA DE COLORES
 #A03390 morado más claro
 */
 
-body{
+* {
     margin: 0;
     padding: 0;
-
 }
 
 .product-stripe {
@@ -61,6 +60,16 @@ h1{
 .form h2,
 .form label {
     color: white;
+}
+
+footer {
+    background: #32378d;
+    background: linear-gradient(180deg,#32378d 0%, #683396 80%);
+    background: -webkit-linear-gradient(180deg,#32378d 0%, #683396 80%);
+    background: -moz-linear-gradient(180deg,#32378d 0%, #683396 80%);
+
+    color: white;
+    font-weight: 700;
 }
 
 @media(max-width:960px) {
