@@ -12,16 +12,33 @@ body{
     padding: 0;
 
 }
-.card img {
-    height: 35rem;
+
+.product-stripe {
+    overflow-x: scroll;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
+
+.stripe-container {
+    display: flex;
+}
+
+.stripe-container .card {
+    width: 300px;
+    margin-right: 1rem;
+}
+
+.stripe-container .card img {
+    min-height: 400px;
+}
+
 .datosCliente{
      color:aliceblue;
      background-color: black;
      margin-top: 5px;
 
 }
-#listado {
+.background-catalogo {
     background: url(img/cora.jpg);
     background-size: cover;
     background-position: center;
@@ -44,4 +61,10 @@ h1{
 .form h2,
 .form label {
     color: white;
+}
+
+@media(max-width:960px) {
+    .background-catalogo {
+        background-image: none;
+    }
 }

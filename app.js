@@ -39,13 +39,13 @@ const mostrarProd = async () => {
 	data.forEach((producto) => {
 		const card = document.createElement("card");
 		card.innerHTML = `
-            <div class="card m-2 mt-2 mb-2 g-3 align-items-center" style="width: 25rem;">
-            <img src="${producto.img}" class="card-img-top" alt="...">
-            <div class="card-body">
-            <h5 class="card-title text-center">${producto.nombre}</h5>
-            <p class="card-text text-center">${producto.precio}</p>
-            <button id="${producto.id}" class="btn btnComprar btn-primary">AÑADIR AL CARRITO</button>
-            </div>
+            <div class="card">
+            	<img src="${producto.img}" class="card-img-top" alt="...">     
+            	<div class="card-body">
+            		<h5 class="card-title text-center">${producto.nombre}</h5>
+            		<p class="card-text text-center">${producto.precio}</p>
+            	<button id="${producto.id}" class="btn btnComprar btn-primary">AÑADIR AL CARRITO</button>
+            	</div>
             </div>`;
 
 		lista.append(card);
